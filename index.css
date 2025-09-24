@@ -1,0 +1,132 @@
+/* Navbar Styling */
+nav {
+    background-color: #8B9DE7;
+    color: #4A397B;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: #3a2676;
+    text-decoration: none;
+}
+
+.logo {
+    border-radius: 100px;
+    width: 35px;
+}
+
+/* Menu Styling */
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #aab4fc;
+    color: rgb(66, 66, 200);
+    transition: 0.5s;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+/* Toggle & Icon */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Book Gallery */
+.book-gallery {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.book-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-item img {
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.book-item img:hover {
+    transform: scale(1.05);
+}
+
+.book-item button {
+    background-color: rgba(141, 141, 219, 0.904);
+    color: #ffffff;
+    width: fit-content;
+    min-width: 100px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    text-align: center;
+}
+
+.book-item button:hover {
+    background-color: #6c7de2;
+}
+
+/* Responsive Menu */
+@media (max-width: 450px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #8B9DE7;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .book-item button {
+        width: 100%;
+    }
+}
